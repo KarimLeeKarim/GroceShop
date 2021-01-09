@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+}
+
+/* *************************************************BUTUN NAVBARIM******************************* */
+/* NAVBARIN ESASI */
+header .nav-bar{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px;
+    padding:20px 30px;
+}
+
+/* ----NAVBARIM MUYEYEN PIXELDEN SORAM GOZE GELMESI ---*/
+header .addNavBar{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color:silver;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(0px);
+    animation: down 1s linear ;
+}
+@keyframes down{
+    0%{
+        transform: translateY(-50px);
+    }
+}
+
+header .center .add{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 6px;
+}
+
+header .center .add img{
+    margin-left: 15px;
+}
+
+header .center .add input{
+    border: none;
+    margin-left: 18px;
+    background-color: white;
+    color: grey;
+}
+
+
+
+/* NAVBARIN SOLTEREFI */
+
+header .leftside{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items:center;
+}
+
+
+header .leftMenu .submenu{
+    width: 63%;
+    display: flex;
+    justify-content:space-around;
+    padding: 7px 0;
+    margin-left: 25px;
+    background-color: white;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(0, 158, 127);
+}
+
+header .leftMenu .submenu .submenu-under{
+    display: flex;
+}
+header .leftMenu .submenu .submenu-under p{
+    margin-left: 8px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+
+/* NAVBARIN SAGTEREFI */
+
+header .rightside{
+    display: grid;
+    grid-template-columns: 130px 150px 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-weight: 500;
+}
+header .help{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+}
+header .help p{
+    display: grid;
+    grid-template-columns: 1fr 95px;
+    justify-items: center;
+}
+.rightside .offer,.help,.langs,p{
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+
+header .help .question{
+    font-size: 15px;
+    font-weight: 800;
+    height: 16px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .langs{
+    background-color: white;
+    text-align: center;
+    padding: 7px 10px;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 6px;
+    cursor: pointer;
+    color: rgb(0, 158, 127);
+}
+header .langs span{
+    margin-left: 5px;
+}
+
+header .rightside .btn input{
+    background-color: rgb(0, 158, 127);
+    border: 1px solid rgb(0, 158, 127);
+    padding: 5px 10px;
+    color: white;
+    font-size: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* HEADERDE OLAN SHEKIL */
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../images/headerpage.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+/* ************HEADERIN DAXILIN ORTADA OLAN YAZILAR************** */
+header .textBanner{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .textBanner  h2{
+    color: #0D1136;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header .textBanner p{
+    color: rgb(119, 121, 140);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 60px !important;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/********************* FORM ****************** */
+.textBanner form {
+    background-color: white;
+    height: 48px;
+    border-radius: 10px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textBanner form span{
+    color:rgb(0, 158, 127) ;
+    padding: 5px 20px;
+    margin: 0 20px 0 5px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 6px;
+}
+
+.textBanner form input{
+    border: none;
+    width: 100%;   
+}
+
+.textBanner form button{
+    color: white;
+    background-color: rgb(0, 158, 127);
+    border: 1px solid rgb(0, 158, 127);
+    padding: 0 30px;
+    border-radius: 0px 10px 10px 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBanner form button img{
+    padding-right: 10px;
+}
+
+
+/*================== SLICK CARUSEL=========== */
+.slick{
+    /* padding: 60px; */
+    width: 96%;
+    margin: auto;
+    display: block;
+
+}
+.slick .item{
+   padding: 0 15px;
+   cursor: pointer;
+}
+
+.slick img{
+    max-width: 100%;
+    padding: 50px 15px;
+}
+
+/*==================== FIXED BUTTON=================== */
+.btn_Fixed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    position: fixed;
+    top: 42%;
+    right: 0px;
+    background-color: rgb(0, 158, 127);
+    border-radius: 10px 0 0 10px;
+    z-index: 99;
+    font-size: 13px;
+    font-weight: 700;
+}
+.btn_Fixed span:nth-child(1){
+    color: white;
+}
+.btn_Fixed span:nth-child(2){
+    color: rgb(0, 158, 127);
+    background-color: white;
+    border-radius: 6px;
+    width: 70%;
+    text-align: center;
+    padding: 8px 0;
+    margin-top:10px ;
+}
+
+/*==================== DEMOS BUTTON=================== */
+
+.btn_Demos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    width: 45px;
+    cursor: pointer;
+    position: fixed;
+    top: 70%;
+    right: 0px;
+    background: linear-gradient(-60deg, rgb(52, 143, 80), rgb(86, 180, 211));
+    color: white;
+    border-radius: 10px 0 0 10px;
+    z-index: 99;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgb(52, 143, 80) , 0 0 30px rgb(52, 143, 80),
+    0 0 60px rgb(52, 143, 80);
+    transform: translate(0px);
+    animation: button 1s linear; 
+}
+
+@keyframes button{
+    0%{
+        transform: translate(70px);
+    }
+
+}
+.btn_Demos:hover{
+    animation-play-state: paused
+}
+
+.btn_Demos span{
+    line-height: 1;
+    font-weight: normal;
+}
+
