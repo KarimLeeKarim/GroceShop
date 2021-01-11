@@ -361,19 +361,18 @@ main section .firstRow{
 }
 
 main section .underRow>img{
-    width: 200px;
+    width: 240px;
     height: 200px;
+    margin: auto;
 }
 main section .firstRow .underRow{
     box-sizing: border-box;
-    width: 220px;
+    width: 250px;
     height: 400px;
     margin-top: 20px;
     padding: 10px;
     background-color: white;
     border-radius: 10px;
-
-
 }
 
 .words{
